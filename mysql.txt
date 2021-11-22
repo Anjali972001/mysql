@@ -1,0 +1,37 @@
+
+create table person79(p_id number(2),l_name varchar(8),f_name varchar(8),age number(4));
+desc person79;
+
+
+TABLE PERSON79 
+Result Set 1
+Column	Null?	Type
+P_ID	 - 	NUMBER(2,0)
+L_NAME	 - 	VARCHAR2(8)
+F_NAME	 - 	VARCHAR2(8)
+AGE	 - 	NUMBER(4,0)
+
+
+
+insert into person79(p_id,l_name,f_name,age) values(1,'Sharma','Ganga',30);
+insert into person79(p_id,l_name,f_name,age) values(2,'Gambhir','Jatin',32);
+insert into person79(p_id,l_name,f_name,age) values(3,'Narayan','Kishore',33);
+
+
+
+
+select * from person79;
+
+P_ID	L_NAME	F_NAME	AGE
+2	Gambhir	Jatin	32
+1	Sharma	Ganga	30
+3	Narayan	Kishore	33
+
+
+
+alter table person79 add primary key(p_id);
+
+
+
+
+
