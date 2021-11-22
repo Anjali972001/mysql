@@ -31,6 +31,31 @@ P_ID	L_NAME	F_NAME	AGE
 
 alter table person79 add primary key(p_id);
 
+create table order79 (o_id number(2) primary key, o_no number(5), p_id number(2), foreign key (p_id) references person79(p_id));
+
+insert into order79 values(4,40799,1);
+insert into order79 values(1,77895,3);
+insert into order79 values(2,35655,3);
+insert into order79 values(3,29250,2);
+
+select * from order79;
+
+Result Set 2
+O_ID	O_NO	P_ID
+2	29250	3
+4	40799	1
+1	77895	3
+3	35655	2
+
+
+insert into order79 values(5,11112,8);
+//integrity constraint  violated - parent key not found ORA-06512: at "SYS.DBMS_SQL",
+
+
+delete from order79 where o_id=2;
+///
+1 row(s) deleted.
+
 
 
 
